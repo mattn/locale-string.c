@@ -141,7 +141,7 @@ utf8_to_locale_alloc(const char* str) {
     return NULL;
   }
   char* top = pmbs;
-  int n;
+  size_t n;
   for(n = 0; n < pwcl; n++) {
     size_t clen = wctomb(top, pwcs[n]);
     top += clen <= 0 ? 1 : clen;
@@ -195,7 +195,7 @@ utf8_from_locale_alloc(const char* str) {
     return NULL;
   }
   char* top = pmbs;
-  int n;
+  size_t n;
   for(n = 0; n < pwcl; n++) {
     unsigned char bytes[8] = {0};
     size_t clen = utf_char2bytes(pwcs[n], bytes);
