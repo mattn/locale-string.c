@@ -3,6 +3,7 @@
 #ifdef _WIN32
 # include <windows.h>
 #else
+#include <wchar.h>
 #include <string.h>
 #include <stdlib.h>
 #include <memory.h>

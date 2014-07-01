@@ -7,8 +7,6 @@
  * copyright 2014 - mattn <mattn.jp@gmail.com>
  */
 
-#include <wchar.h>
-
 /**
  * convert utf-8 string to locale string
  */
