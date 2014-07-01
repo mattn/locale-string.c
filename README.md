@@ -23,7 +23,7 @@ main(int argc, char* argv[]) {
    * utf-8, but filesystem should be encoding as string
    * depend on locale. utf8_to_locale_alloc convert
    * utf-8 string into locale string.
-   *
+   */
   char* mbs = utf8_to_locale_alloc(utf8);
   FILE* fp = fopen(mbs, "w");
   fprintf(fp, "hello world\n");
@@ -58,7 +58,7 @@ main(int argc, char* argv[]) {
    * utf-8, but filesystem should be encoding as string
    * depend on locale. utf8_to_locale_alloc convert
    * utf-8 string into locale string.
-   *
+   */
   char* mbs = LOCALE_ALLOC(utf8);
   FILE* fp = fopen(mbs, "w");
   fprintf(fp, "hello world\n");
