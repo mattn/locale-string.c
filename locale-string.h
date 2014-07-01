@@ -22,9 +22,13 @@ utf8_from_locale_alloc(const char*);
 #ifdef _WIN32
 # define UTF8_ALLOC(p) utf8_from_locale_alloc(p)
 # define UTF8_FREE(p) free(p)
+# define LOCALE_ALLOC(p) (p)
+# define LOCALE_FREE(p)
 #else
 # define UTF8_ALLOC(p) (p)
 # define UTF8_FREE(p)
+# define LOCALE_ALLOC(p) utf8_to_locale_alloc(p)
+# define LOCALE_FREE(p) free(p)
 #endif
 
 #endif
